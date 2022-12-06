@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Flex&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <img
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDEzLjEyIDI0MS4yNiI+PHJlY3QgZmlsbD0iIzJhMzM2MiIgeD0iMzI4Ljc4IiB5PSI4Mi4xIiB3aWR0aD0iMTYuMTEiIGhlaWdodD0iODIuODkiLz4gPHBhdGggZmlsbD0iIzJhMzM2MiIgZD0iTTQwNy4yNCwxMzUuNThjMCwxMS40NC03LjM2LDE2LjU4LTE3LjE2LDE2LjU4cy0xNi4zNS01LjE0LTE2LjM1LTE2VjEwNi42MkgzNTcuNjJWMTM5LjljMCwxNi41NywxMC4zOSwyNi4yNiwyNy42NywyNi4yNiwxMC44NiwwLDE2LjkzLTQsMjEtOC41MmguOTRsMS40LDcuMzZoMTQuODJWMTA2LjYySDQwNy4yNFoiLz4gPHBhdGggZmlsbD0iIzJhMzM2MiIgZD0iTTU2NS4yNywxNTMuNDRjLTExLjc5LDAtMTguNDQtNS4zNy0xOS40OS0xMy4xOWg1MS4xM2EzMy43OCwzMy43OCwwLDAsMCwuMzUtNC45MWMtLjExLTIxLTE2LTI5Ljg5LTMzLTI5Ljg5LTE5LjczLDAtMzQuNTYsMTEuOC0zNC41NiwzMC44MywwLDE4LjA5LDE0LjI1LDI5Ljg4LDM1LjYxLDI5Ljg4LDE3Ljg3LDAsMjkuNzctNy45MywzMi4yMy0yMC4wOEg1ODEuNjJDNTc5LjYzLDE1MC44Nyw1NzMuOTEsMTUzLjQ0LDU2NS4yNywxNTMuNDRabS0xLTM1LjI2YzEwLjI4LDAsMTYuMjMsNC41NSwxNy4xNywxMUg1NDYuMTNDNTQ3LjY0LDEyMyw1NTMuNiwxMTguMTgsNTY0LjIyLDExOC4xOFoiLz4gPHBhdGggZmlsbD0iIzJhMzM2MiIgZD0iTTYyNC42MywxMTVoLTFsLTEuNTItOC40MUg2MDcuNDdWMTY1aDE2LjExVjEzOS45YzAtMTEuMzMsNi41My0xNy42MywxOC42OC0xNy42M2EzMi41LDMyLjUsMCwwLDEsNi41OC41OFYxMDYuNjJoLTIuMjVDNjM1Ljg1LDEwNi42Miw2MjkuMTgsMTA4Ljg0LDYyNC42MywxMTVaIi8+IDxwb2x5Z29uIGZpbGw9IiMyYTMzNjIiIHBvaW50cz0iNzI3Ljk0IDE0Ni43OCA3MjcuMDEgMTQ2Ljc4IDcxMy4yMyAxMTAuMjQgNjk2LjY1IDExMC4yNCA2ODMuMTEgMTQ2LjY3IDY4Mi4wNiAxNDYuNjcgNjY5LjIyIDEwNi42MiA2NTMuMjIgMTA2LjYyIDY3Mi45NSAxNjUgNjkwLjQ3IDE2NSA3MDQuNDggMTI3Ljc1IDcwNS40MSAxMjcuNzUgNzE5LjE5IDE2NSA3MzYuODIgMTY1IDc1Ni41NSAxMDYuNjIgNzQwLjU1IDEwNi42MiA3MjcuOTQgMTQ2Ljc4Ii8+IDxwYXRoIGZpbGw9IiMyYTMzNjIiIGQ9Ik04MjAuNjcsMTQ4VjEyOC40NmMwLTE1Ljg4LTEzLjQzLTIzLTMwLjEzLTIzLTE3Ljc0LDAtMjguODMsOC40MS0zMC4zNSwyMUg3NzYuM2MxLjE3LTUuNDksNS44NC04LjUyLDE0LjI0LTguNTJzMTQsMy4xNSwxNCw5LjU3VjEyOWwtMjYuMjcsMmMtMTIuMTQuOTQtMjEsNi4zMS0yMSwxNy43NSwwLDExLjc5LDEwLjE2LDE3LjM5LDI1LjEsMTcuMzksMTIuMDYsMCwxOS40MS0zLjM2LDIzLjkxLTguNDNoLjhjMi41Myw1LjcsNy42Niw3LjI3LDEzLjI0LDcuMjdoNi43N1YxNTMuMDloLTEuNTJDODIyLjE4LDE1My4wOSw4MjAuNjcsMTUxLjQ2LDgyMC42NywxNDhabS0xNi4xMi02LjE5YzAsOS4yMy0xMSwxMi4yNi0yMC40MywxMi4yNi02LjQyLDAtMTAuNjItMS42My0xMC42Mi02LjA3LDAtNCwzLjYyLTUuOTUsOS02LjQybDIyLjA2LTEuNjNaIi8+IDxwb2x5Z29uIGZpbGw9IiMyYTMzNjIiIHBvaW50cz0iODgwLjIzIDEwNi42MiA4NjEuNDMgMTQ4Ljg5IDg2MC4zOCAxNDguODkgODQxLjM1IDEwNi42MiA4MjMuOTUgMTA2LjYyIDg1MS4xNSAxNjUgODcwLjQyIDE2NSA4OTcuNSAxMDYuNjIgODgwLjIzIDEwNi42MiIvPiA8cGF0aCBmaWxsPSIjMmEzMzYyIiBkPSJNOTQ5LDE0Ni4wOGMtMiw0Ljc5LTcuNzEsNy4zNi0xNi4zNSw3LjM2LTExLjc5LDAtMTguNDQtNS4zNy0xOS40OS0xMy4xOWg1MS4xM2EzMy43OCwzMy43OCwwLDAsMCwuMzUtNC45MWMtLjExLTIxLTE2LTI5Ljg5LTMzLTI5Ljg5LTE5LjczLDAtMzQuNTUsMTEuOC0zNC41NSwzMC44MywwLDE4LjA5LDE0LjI0LDI5Ljg4LDM1LjYsMjkuODgsMTcuODcsMCwyOS43Ny03LjkzLDMyLjIzLTIwLjA4Wm0tMTcuNC0yNy45YzEwLjI4LDAsMTYuMjMsNC41NSwxNy4xNywxMUg5MTMuNDdDOTE1LDEyMyw5MjAuOTQsMTE4LjE4LDkzMS41NiwxMTguMThaIi8+IDxwYXRoIGZpbGw9IiMyYTMzNjIiIGQ9Ik0zMDIuNiwxMDIuMzJjMC01LjE0LDMuNjItNy4zNSw4LjI5LTcuMzVhMjQuMTcsMjQuMTcsMCwwLDEsNi40Mi45M0wzMjAsODQuMjJhMzYuNzEsMzYuNzEsMCwwLDAtMTIuMTQtMi4xYy0xMS45MSwwLTIxLjQ4LDYuMzEtMjEuNDgsMTkuMzh2NS4xMmgtMTMuOXYxMi43OWgxMy45VjE2NUgzMDIuNnYtNDUuNmgxOC4xNlYxMDYuNjJIMzAyLjZaIi8+IDxwYXRoIGZpbGw9IiMyYTMzNjIiIGQ9Ik00NTksOTAuMTZINDQ0bC0uODQsMTYuNDZINDMwLjQ4djEyLjc5aDEyLjM4djI4Ljc4YzAsOS44LDUsMTgsMjAsMThhNTIuODQsNTIuODQsMCwwLDAsMTEuNTYtMS4yOFYxNTIuNjJhMzQuMjksMzQuMjksMCwwLDEtNi42Ni44MmMtOC4wNSwwLTguNzUtNC41NS04Ljc1LTguMDZ2LTI2aDE2VjEwNi42Mkg0NTlaIi8+IDxwYXRoIGZpbGw9IiMyYTMzNjIiIGQ9Ik01MDkuNTksOTAuMTZINDk0LjY0bC0uODQsMTYuNDZINDgxLjA5djEyLjc5aDEyLjM4djI4Ljc4YzAsOS44LDUsMTgsMjAsMThBNTIuODQsNTIuODQsMCwwLDAsNTI1LDE2NC44OFYxNTIuNjJhMzQuMjksMzQuMjksMCwwLDEtNi42Ni44MmMtOC4wNSwwLTguNzUtNC41NS04Ljc1LTguMDZ2LTI2aDE2LjA1VjEwNi42Mkg1MDkuNTlaIi8+IDxwYXRoIGZpbGw9IiMwMDlhNDYiIGQ9Ik00OC4yMyw3OS44OWMwLTkuMzcsMi43NC0xNy4zNyw4LjQ5LTIzLjEybDEwLDEwQzU1LjU5LDc3Ljg2LDY1LjMxLDExMi4zNCw5NywxNDQuMDZzNjYuMTksNDEuNDMsNzcuMzEsMzAuMzJsMTAsMTBjLTE4Ljc2LDE4Ljc2LTYxLjQ5LDUuNDUtOTcuMjYtMzAuMzNDNjIuMjQsMTI5LjIzLDQ4LjIzLDEwMS4wNyw0OC4yMyw3OS44OVoiLz4gPHBhdGggZmlsbD0iI2ZmNTgwNSIgZD0iTTExMS4yOSwxOTNjLTkuMzcsMC0xNy4zNy0yLjc0LTIzLjEzLTguNDlsMTAtMTBjMTEuMTEsMTEuMTEsNDUuNTksMS4zOSw3Ny4zMS0zMC4zMlMyMTYuODksNzgsMjA1Ljc4LDY2Ljg5bDEwLTEwYzE4Ljc3LDE4Ljc2LDUuNDUsNjEuNDktMzAuMzMsOTcuMjZDMTYwLjYzLDE3OSwxMzIuNDcsMTkzLDExMS4yOSwxOTNaIi8+IDxwYXRoIGZpbGw9IiNmNWFmY2IiIGQ9Ik0xODguNzYsMTM5Ljg0Yy02LjA3LTE3LjQ4LTE4LjQ3LTM2LjE2LTM0LjkyLTUyLjYtMzUuNzctMzUuNzgtNzguNS00OS4xLTk3LjI2LTMwLjMzaDBjLTEuMzMsMS4zNC0uMTgsNC42NSwyLjU4LDcuNDFzNi4wNywzLjksNy40LDIuNTdjMTEuMTItMTEuMTEsNDUuNi0xLjM5LDc3LjMxLDMwLjMzLDE1LDE1LDI2LjE4LDMxLjc1LDMxLjU3LDQ3LjI1LDQuNzIsMTMuNTksNC4yNiwyNC41NS0xLjI0LDMwLjA1aDBjLTEuMzQsMS4zMy0uMTgsNC42NSwyLjU3LDcuNHM2LjA3LDMuOTEsNy40MSwyLjU3QzE5My43OSwxNzQuODgsMTk1LjQyLDE1OSwxODguNzYsMTM5Ljg0WiIvPiA8cGF0aCBmaWxsPSIjZmY5YjAwIiBkPSJNMjE1Ljc2LDU2LjkxYy05LjYzLTkuNjMtMjUuNDktMTEuMjYtNDQuNjctNC41OS0xNy40Nyw2LjA2LTM2LjE2LDE4LjQ3LTUyLjYsMzQuOTFDODIuNzIsMTIzLDY5LjQsMTY1LjczLDg4LjE2LDE4NC41aDBjMS4zNCwxLjMzLDQuNjUuMTgsNy40MS0yLjU3czMuOTEtNi4wNywyLjU3LTcuNDFDODcsMTYzLjQxLDk2Ljc1LDEyOC45MywxMjguNDcsOTcuMjFjMTUtMTUsMzEuNzUtMjYuMTgsNDcuMjUtMzEuNTcsMTMuNTktNC43MSwyNC41NS00LjI2LDMwLjA2LDEuMjRoMGMxLjMzLDEuMzMsNC42NS4xOCw3LjQtMi41OFMyMTcuMDksNTguMjQsMjE1Ljc2LDU2LjkxWiIvPjwvc3ZnPg=="
+        width="150px"
+        alt=""
+      />
+      <nav id="showNav">
+        <div class="payments">
+          <h3 id="payment">Payments</h3>
+          <div class="pay_linksContainer">
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGRfX25hdl9fbGlua19faWNvbiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQ5OTVfODczNSkiPjxwYXRoIGQ9Ik0yOC4zNTU3IC0wLjAzMTQ5NDFIMTMuNjQ0NkM2LjEwMDI4IC0wLjAzMTQ5NDEgLTAuMDE1NjI1IDYuMDg0NDEgLTAuMDE1NjI1IDEzLjYyODhWMjguMzM5OEMtMC4wMTU2MjUgMzUuODg0MSA2LjEwMDI4IDQyIDEzLjY0NDYgNDJIMjguMzU1N0MzNS45IDQyIDQyLjAxNTkgMzUuODg0MSA0Mi4wMTU5IDI4LjMzOThWMTMuNjI4OEM0Mi4wMTU5IDYuMDg0NDEgMzUuOSAtMC4wMzE0OTQxIDI4LjM1NTcgLTAuMDMxNDk0MVoiIGZpbGw9IiNGREY2RTYiLz4gPHBhdGggZD0iTTE2Ljg4MTMgMzMuNDk5MkwxNi42ODY5IDMzLjU0MTJDMTYuNDI0NyAzMy41OTQzIDE2LjE1NDYgMzMuNTk0NCAxNS44OTI0IDMzLjU0MTNDMTUuNjMwMiAzMy40ODgzIDE1LjM4MTQgMzMuMzgzMiAxNS4xNjA1IDMzLjIzMjRDMTQuOTM5NiAzMy4wODE1IDE0Ljc1MTIgMzIuODg3OSAxNC42MDY0IDMyLjY2M0MxNC40NjE2IDMyLjQzODEgMTQuMzYzMyAzMi4xODY1IDE0LjMxNzQgMzEuOTIzTDEwLjM4MjIgMTIuMzU3M0MxMC4yNjYgMTEuODI0MyAxMC4zNjE3IDExLjI2NyAxMC42NDkgMTAuODAzM0MxMC45MzYzIDEwLjMzOTUgMTEuMzkyNiAxMC4wMDU2IDExLjkyMTYgOS44NzIyTDEyLjExNiA5LjgyNDkyQzEyLjM3ODEgOS43NzI1NCAxMi42NDggOS43NzMwNSAxMi45MDk5IDkuODI2NDFDMTMuMTcxOCA5Ljg3OTc2IDEzLjQyMDQgOS45ODQ4OSAxMy42NDExIDEwLjEzNTZDMTMuODYxOCAxMC4yODY0IDE0LjA1MDIgMTAuNDc5NyAxNC4xOTUyIDEwLjcwNDJDMTQuMzQwMiAxMC45Mjg3IDE0LjQzODkgMTEuMTc5OSAxNC40ODU1IDExLjQ0MzFMMTguNDIwNyAzMC45OTgzQzE4LjU0MTQgMzEuNTMzNiAxOC40NDc5IDMyLjA5NDkgMTguMTYwMyAzMi41NjIyQzE3Ljg3MjYgMzMuMDI5NiAxNy40MTM2IDMzLjM2NTggMTYuODgxMyAzMy40OTkyWiIgZmlsbD0iIzJBMzc2MSIvPiA8cGF0aCBkPSJNMzAuMjYyMyAyMS4zOTkzTDMwLjAwNDkgMjEuNDU3MUwxOS44Mzg1IDIzLjcxMTFDMTkuNjUwMiAyMy43NDk4IDE5LjQ1NjEgMjMuNzUwMyAxOS4yNjc2IDIzLjcxMjVDMTkuMDc5MiAyMy42NzQ3IDE4LjkwMDIgMjMuNTk5NCAxOC43NDE0IDIzLjQ5MTFDMTguNTgyNiAyMy4zODI4IDE4LjQ0NzIgMjMuMjQzNiAxOC4zNDMzIDIzLjA4MkMxOC4yMzkzIDIyLjkyMDMgMTguMTY4OSAyMi43Mzk0IDE4LjEzNjIgMjIuNTVMMTguMDk0MiAyMi4zNTAzQzE4LjA2NjUgMjIuMTkyNyAxOC4wMDc2IDIyLjA0MjIgMTcuOTIwOCAyMS45MDc4QzE3LjgzNCAyMS43NzM0IDE3LjcyMTIgMjEuNjU3NyAxNy41ODg5IDIxLjU2NzZDMTcuNDU2NyAyMS40Nzc1IDE3LjMwNzggMjEuNDE0OCAxNy4xNTA5IDIxLjM4MzJDMTYuOTk0IDIxLjM1MTYgMTYuODMyNCAyMS4zNTE3IDE2LjY3NTYgMjEuMzgzNkwxNS43MDM2IDIxLjU5MzdDMTUuNDYxMSAyMS42NDM4IDE1LjIxMDkgMjEuNjQ0NSAxNC45NjgxIDIxLjU5NThDMTQuNzI1MyAyMS41NDcxIDE0LjQ5NDggMjEuNDQ5OSAxNC4yOTAzIDIxLjMxMDJDMTQuMDg1OCAyMS4xNzA1IDEzLjkxMTYgMjAuOTkxIDEzLjc3OCAyMC43ODI0QzEzLjY0NDQgMjAuNTczOSAxMy41NTQyIDIwLjM0MDUgMTMuNTEyOCAyMC4wOTY0TDEyLjM2NzQgMTQuNDAxMUwxMi4wODM3IDEzLjEzNDlDMTEuOTk5NSAxMi43NDggMTIuMDY5MiAxMi4zNDM1IDEyLjI3ODEgMTIuMDA3MUMxMi40ODcgMTEuNjcwNyAxMi44MTg2IDExLjQyODkgMTMuMjAyOCAxMS4zMzI4TDE0LjA1OTIgMTEuMTM4NEwyMS4xNjc3IDkuNTYyMjJDMjEuMzQwNCA5LjUyNDgzIDIxLjUxODkgOS41MjI1MSAyMS42OTI1IDkuNTU1NDNDMjEuODY2MSA5LjU4ODM0IDIyLjAzMTMgOS42NTU4MSAyMi4xNzg0IDkuNzUzODNDMjIuMzI1NCA5Ljg1MTg1IDIyLjQ1MTIgOS45Nzg0MSAyMi41NDg0IDEwLjEyNkMyMi42NDU1IDEwLjI3MzYgMjIuNzEyIDEwLjQzOTIgMjIuNzQzOSAxMC42MTNMMjIuODAxNyAxMC44OTY3QzIyLjgyOTQgMTEuMDYwMiAyMi44ODk3IDExLjIxNjQgMjIuOTc5IDExLjM1NjFDMjMuMDY4MyAxMS40OTU3IDIzLjE4NDggMTEuNjE2IDIzLjMyMTYgMTEuNzA5NkMyMy40NTg0IDExLjgwMzMgMjMuNjEyNyAxMS44Njg0IDIzLjc3NTIgMTEuOTAxMkMyMy45Mzc3IDExLjkzMzkgMjQuMTA1MiAxMS45MzM2IDI0LjI2NzYgMTEuOTAwMkwyOC4wNzY3IDExLjAzMzNDMjguMzA0MyAxMC45ODc4IDI4LjUzODcgMTAuOTg4NCAyOC43NjYxIDExLjAzNDlDMjguOTkzNSAxMS4wODE0IDI5LjIwOTMgMTEuMTczIDI5LjQwMDcgMTEuMzA0MkMyOS41OTIyIDExLjQzNTQgMjkuNzU1NCAxMS42MDM3IDI5Ljg4MDggMTEuNzk5QzMwLjAwNjIgMTEuOTk0MyAzMC4wOTEzIDEyLjIxMjcgMzAuMTMxIDEyLjQ0MTRMMzEuMzIzNiAxOC4zODg4TDMxLjUyMzMgMTkuMzg3MUMzMS42MTI1IDE5LjgyMDMgMzEuNTMxMyAyMC4yNzEzIDMxLjI5NjQgMjAuNjQ2MUMzMS4wNjE1IDIxLjAyMSAzMC42OTExIDIxLjI5MDggMzAuMjYyMyAyMS4zOTkzVjIxLjM5OTNaIiBmaWxsPSIjRkY5RjAwIi8+IDxwYXRoIGQ9Ik0xMy4yMjUyIDExLjMxMThDMTIuODMyNyAxMS40MDMxIDEyLjQ5MjQgMTEuNjQ2MiAxMi4yNzg3IDExLjk4NzlDMTIuMDY1IDEyLjMyOTYgMTEuOTk1NCAxMi43NDIgMTIuMDg1MSAxMy4xMzQ5TDEyLjM0NzggMTQuNDIyMUwxMy40OTMyIDIwLjExNzRDMTMuNTM0NiAyMC4zNjE1IDEzLjYyNDggMjAuNTk0OCAxMy43NTg0IDIwLjgwMzRDMTMuODkyIDIxLjAxMTkgMTQuMDY2MiAyMS4xOTE0IDE0LjI3MDcgMjEuMzMxMkMxNC40NzUyIDIxLjQ3MDkgMTQuNzA1NyAyMS41NjgxIDE0Ljk0ODUgMjEuNjE2OEMxNS4xOTEzIDIxLjY2NTUgMTUuNDQxNSAyMS42NjQ4IDE1LjY4NCAyMS42MTQ3TDE2LjQ3MjEgMjEuNDQxM0wxNC41MDcyIDExLjU1ODdDMTQuNDcwNCAxMS4zOTA1IDE0LjQxNTggMTEuMjI2NyAxNC4zNDQzIDExLjA3MDFMMTQuMDgxNiAxMS4xMjc5TDEzLjIyNTIgMTEuMzExOFoiIGZpbGw9IiNGRjU4MDQiLz48L2c+IDxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfNDk5NV84NzM1Ij48cmVjdCB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIGZpbGw9IndoaXRlIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+"
+                alt=""
+              />
+              <div class="link">
+                <a href="#">Collect payments</a>
+                <p>Collect payment in 30+ currencies</p>
+              </div>
+            </div>
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGRfX25hdl9fbGlua19faWNvbiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzUwMzFfMjE5MDIpIj48cGF0aCBkPSJNMjguMzY1NiAwLjAxNTc0NzFIMTMuNjY1NkM2LjEyNjk0IDAuMDE1NzQ3MSAwLjAxNTYyNSA2LjEyNzA2IDAuMDE1NjI1IDEzLjY2NTdWMjguMzY1N0MwLjAxNTYyNSAzNS45MDQ0IDYuMTI2OTQgNDIuMDE1NyAxMy42NjU2IDQyLjAxNTdIMjguMzY1NkMzNS45MDQzIDQyLjAxNTcgNDIuMDE1NiAzNS45MDQ0IDQyLjAxNTYgMjguMzY1N1YxMy42NjU3QzQyLjAxNTYgNi4xMjcwNiAzNS45MDQzIDAuMDE1NzQ3MSAyOC4zNjU2IDAuMDE1NzQ3MVoiIGZpbGw9IiNFOUVBRjMiLz4gPHBhdGggZD0iTTIxLjAxNTkgMjguNDE4M0MyNi41MTYyIDI4LjQxODMgMzAuOTc1MSAyMy45NTkzIDMwLjk3NTEgMTguNDU5QzMwLjk3NTEgMTIuOTU4NyAyNi41MTYyIDguNDk5NzYgMjEuMDE1OSA4LjQ5OTc2QzE1LjUxNTUgOC40OTk3NiAxMS4wNTY2IDEyLjk1ODcgMTEuMDU2NiAxOC40NTlDMTEuMDU2NiAyMy45NTkzIDE1LjUxNTUgMjguNDE4MyAyMS4wMTU5IDI4LjQxODNaIiBmaWxsPSIjMkEzNzYxIi8+IDxwYXRoIGQ9Ik0yMi42MDA2IDE5LjUwOUwyNy45ODcxIDMxLjA1OUMyOC4xMjg5IDMxLjM2ODMgMjguMTc3MyAzMS43MTIzIDI4LjEyNjUgMzIuMDQ4N0MyOC4wNzU2IDMyLjM4NTEgMjcuOTI3NyAzMi42OTk0IDI3LjcwMDkgMzIuOTUzQzI3LjQ3NCAzMy4yMDY2IDI3LjE3ODEgMzMuMzg4NSAyNi44NDk0IDMzLjQ3NjRDMjYuNTIwNyAzMy41NjQyIDI2LjE3MzUgMzMuNTU0MyAyNS44NTA0IDMzLjQ0NzdMMjEuNTcxNiAzMi4wMjVDMjEuMjE1OCAzMS45MDQyIDIwLjgzMDEgMzEuOTA0MiAyMC40NzQ0IDMyLjAyNUwxNi4xOTA0IDMzLjQ1M0MxNS44NzgzIDMzLjU1NjkgMTUuNTQzMyAzMy41NzA1IDE1LjIyMzkgMzMuNDkyMUMxNC45MDQ1IDMzLjQxMzYgMTQuNjEzOCAzMy4yNDY1IDE0LjM4NTQgMzMuMDA5OEMxNC4xNTcgMzIuNzczMiAxNC4wMDAyIDMyLjQ3NjcgMTMuOTMzMSAzMi4xNTQ4QzEzLjg2NiAzMS44MzI4IDEzLjg5MTQgMzEuNDk4NCAxNC4wMDY0IDMxLjE5MDJDMTQuMDE4NCAzMS4xNDQ1IDE0LjAzNiAzMS4xMDA0IDE0LjA1ODkgMzEuMDU5TDE5LjQyNDQgMTkuNTAzN0MxOS41NTE2IDE5LjIyMDkgMTkuNzUzOSAxOC45NzgzIDIwLjAwOTQgMTguODAyNEMyMC4yNjQ5IDE4LjYyNjUgMjAuNTYzNyAxOC41MjQxIDIwLjg3MzQgMTguNTA2MkgyMC45OTk0QzIxLjMzNTQgMTguNDk3MSAyMS42NjY2IDE4LjU4NzQgMjEuOTUxNSAxOC43NjU4QzIyLjIzNjMgMTguOTQ0MiAyMi40NjIyIDE5LjIwMjcgMjIuNjAwNiAxOS41MDlWMTkuNTA5WiIgZmlsbD0iI0YyQUVDOSIvPiA8cGF0aCBkPSJNMjEuMDAwNyAyOC40MTgzQzIyLjc5MTYgMjguNDIxNiAyNC41NDk4IDI3LjkzOSAyNi4wODggMjcuMDIxOEwyMi42MDIgMTkuNTA5QzIyLjQ2MzUgMTkuMjAyNyAyMi4yMzc3IDE4Ljk0NDIgMjEuOTUyOCAxOC43NjU4QzIxLjY2NzkgMTguNTg3NCAyMS4zMzY3IDE4LjQ5NzEgMjEuMDAwNyAxOC41MDYySDIwLjg5NTdDMjAuNTgyNCAxOC41MjAzIDIwLjI3OTEgMTguNjIxIDIwLjAxOTYgMTguNzk3MUMxOS43NjAxIDE4Ljk3MzIgMTkuNTU0NSAxOS4yMTc4IDE5LjQyNTcgMTkuNTAzOEwxNS45MDgyIDI3LjAyMThDMTcuNDQ4MiAyNy45MzkyIDE5LjIwODIgMjguNDIxOCAyMS4wMDA3IDI4LjQxODNWMjguNDE4M1oiIGZpbGw9IiNGRjU4MDQiLz48L2c+IDxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfNTAzMV8yMTkwMiI+PHJlY3Qgd2lkdGg9IjQyIiBoZWlnaHQ9IjQyIiBmaWxsPSJ3aGl0ZSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg=="
+                alt=""
+              />
+              <div class="link">
+                <a href="#">Send Money</a>
+                <p>Send money to anyone or business globally</p>
+              </div>
+            </div>
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDIgNDIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgY2xhc3M9ImhkX19uYXZfX2xpbmtfX2ljb24iPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81MDMxXzIxOTE2KSI+PHBhdGggZD0iTTI4LjM0IC0wLjAzMTQ5NDFIMTMuNjI5QzYuMDg0NjUgLTAuMDMxNDk0MSAtMC4wMzEyNSA2LjA4NDQxIC0wLjAzMTI1IDEzLjYyODhWMjguMzM5OEMtMC4wMzEyNSAzNS44ODQxIDYuMDg0NjUgNDIgMTMuNjI5IDQySDI4LjM0QzM1Ljg4NDQgNDIgNDIuMDAwMyAzNS44ODQxIDQyLjAwMDMgMjguMzM5OFYxMy42Mjg4QzQyLjAwMDMgNi4wODQ0MSAzNS44ODQ0IC0wLjAzMTQ5NDEgMjguMzQgLTAuMDMxNDk0MVoiIGZpbGw9IiNGREY2RTYiLz4gPHBhdGggZD0iTTI5LjI2OTYgMTYuNjY1NkMyOS4xMDI5IDE2LjAxMTMgMjguNzE2NSAxNS40MzQxIDI4LjE3NTIgMTUuMDMwNUMyNy42MzQgMTQuNjI3IDI2Ljk3MDUgMTQuNDIxNSAyNi4yOTU5IDE0LjQ0ODRIMTUuODg3OEMxNS4yMTMyIDE0LjQyMTUgMTQuNTQ5NyAxNC42MjcgMTQuMDA4NSAxNS4wMzA1QzEzLjQ2NzIgMTUuNDM0MSAxMy4wODA4IDE2LjAxMTMgMTIuOTE0MSAxNi42NjU2TDEwLjI4NzEgMjkuNDkwNEM5Ljk0NTYyIDMxLjE1NTkgMTEuMzY5NCAzMi42OTAxIDEzLjI1NTYgMzIuNjkwMUgyOC45MjgxQzMwLjgxNDMgMzIuNjkwMSAzMi4yMzgxIDMxLjE1NTkgMzEuODk2NiAyOS40OTA0TDI5LjI2OTYgMTYuNjY1NloiIGZpbGw9IiMyQTM3NjEiLz4gPHBhdGggZD0iTTI2LjU2OTEgMTEuOTAwMlYxNy44NjM0QzI2LjU2NjQgMTguMTI3NyAyNi40ODY5IDE4LjM4NTUgMjYuMzQwNSAxOC42MDU2QzI2LjE5NDEgMTguODI1NyAyNS45ODcgMTguOTk4NiAyNS43NDQzIDE5LjEwMzNDMjUuNTc3OSAxOS4xNzI1IDI1LjM5OSAxOS4yMDY1IDI1LjIxODkgMTkuMjAzMUMyNS4wMzkzIDE5LjIwMzggMjQuODYxMyAxOS4xNjkgMjQuNjk1MyAxOS4xMDA2QzI0LjUyOTIgMTkuMDMyMiAyNC4zNzg0IDE4LjkzMTYgMjQuMjUxNCAxOC44MDQ2QzI0LjEyNDQgMTguNjc3NiAyNC4wMjM4IDE4LjUyNjcgMjMuOTU1NCAxOC4zNjA3QzIzLjg4NyAxOC4xOTQ2IDIzLjg1MjIgMTguMDE2NyAyMy44NTI4IDE3LjgzNzFWMTEuOTAwMkMyMy44NTE0IDExLjU1MjYgMjMuNzgxIDExLjIwODggMjMuNjQ1NyAxMC44ODg2QzIzLjUxMDQgMTAuNTY4NCAyMy4zMTMgMTAuMjc4MyAyMy4wNjQ4IDEwLjAzNUMyMi45MjQyIDkuODkxODcgMjIuNzY1MiA5Ljc2ODE4IDIyLjU5MTkgOS42NjcyM0MyMi4xNzU3IDkuNDAyODUgMjEuNjkyNyA5LjI2MjUzIDIxLjE5OTYgOS4yNjI2N0MyMC41MDI5IDkuMjYyNjcgMTkuODM0NyA5LjUzOTQ0IDE5LjM0MjEgMTAuMDMyMUMxOC44NDk0IDEwLjUyNDcgMTguNTcyNiAxMS4xOTI5IDE4LjU3MjYgMTEuODg5NlYxNy44NjM0QzE4LjU3MjggMTguMTM1MiAxOC40OTE5IDE4LjQwMDggMTguMzQwMyAxOC42MjY0QzE4LjE4ODcgMTguODUxOSAxNy45NzMyIDE5LjAyNzEgMTcuNzIxNSAxOS4xMjk2QzE3LjU1NSAxOS4xOTgyIDE3LjM3NjIgMTkuMjMyMiAxNy4xOTYxIDE5LjIyOTRDMTYuODMzOCAxOS4yMjk0IDE2LjQ4NjQgMTkuMDg1NSAxNi4yMzAyIDE4LjgyOTNDMTUuOTc0IDE4LjU3MzEgMTUuODMwMSAxOC4yMjU3IDE1LjgzMDEgMTcuODYzNFYxMS45MDAyQzE1LjgzMTkgMTEuMDE1MyAxNi4wNTIgMTAuMTQ0NiAxNi40NzA4IDkuMzY1MkMxNi44ODk2IDguNTg1NzYgMTcuNDk0MSA3LjkyMTY0IDE4LjIzMDkgNy40MzE2N0MxOC45Njc3IDYuOTQxNyAxOS44MTM5IDYuNjQxMDEgMjAuNjk0NyA2LjU1NjI0QzIxLjU3NTQgNi40NzE0NyAyMi40NjM1IDYuNjA1MjQgMjMuMjgwMiA2Ljk0NTY5QzI0LjI1MzUgNy4zNTg0OSAyNS4wODQxIDguMDQ4MTIgMjUuNjY4OCA4LjkyODkzQzI2LjI1MzUgOS44MDk3NSAyNi41NjY2IDEwLjg0MjkgMjYuNTY5MSAxMS45MDAyVjExLjkwMDJaIiBmaWxsPSIjRkVCODQzIi8+IDxwYXRoIGQ9Ik0xNS44ODc5IDE0LjQ0ODRIMTUuODMwMVYxNy44NjM0QzE1LjgzMDEgMTguMDQzMyAxNS44NjU2IDE4LjIyMTMgMTUuOTM0NiAxOC4zODc0QzE2LjAwMzUgMTguNTUzNSAxNi4xMDQ2IDE4LjcwNDMgMTYuMjMyIDE4LjgzMTJDMTYuMzU5NCAxOC45NTgxIDE2LjUxMDYgMTkuMDU4NiAxNi42NzcgMTkuMTI3QzE2Ljg0MzMgMTkuMTk1MyAxNy4wMjE1IDE5LjIzMDEgMTcuMjAxNCAxOS4yMjk1QzE3LjM4MTUgMTkuMjMyMyAxNy41NjAyIDE5LjE5ODMgMTcuNzI2OCAxOS4xMjk2QzE3Ljk3NjUgMTkuMDI1NiAxOC4xODk4IDE4Ljg0OTcgMTguMzM5NCAxOC42MjQyQzE4LjQ4OTEgMTguMzk4OCAxOC41Njg0IDE4LjEzNCAxOC41Njc0IDE3Ljg2MzRWMTQuNDQ4NEgxNS44ODc5WiIgZmlsbD0iI0ZGNTgwNCIvPiA8cGF0aCBkPSJNMjUuMjE5NyAxOS4yMDMyQzI1LjM5OTggMTkuMjA2NiAyNS41Nzg3IDE5LjE3MjYgMjUuNzQ1MSAxOS4xMDM0QzI1Ljk4NzggMTguOTk4NyAyNi4xOTQ5IDE4LjgyNTggMjYuMzQxMyAxOC42MDU3QzI2LjQ4NzcgMTguMzg1NiAyNi41NjcyIDE4LjEyNzggMjYuNTY5OSAxNy44NjM0VjE0LjQ2OTRDMjYuNDc5IDE0LjQ2NCAyNi4zODc3IDE0LjQ2NCAyNi4yOTY3IDE0LjQ2OTRIMjMuODM3OVYxNy44NjM0QzIzLjg0MDYgMTguMDQyMSAyMy44Nzg1IDE4LjIxODYgMjMuOTQ5NSAxOC4zODI2QzI0LjAyMDQgMTguNTQ2NyAyNC4xMjI5IDE4LjY5NTEgMjQuMjUxMyAxOC44MTk1QzI0LjM3OTYgMTguOTQ0IDI0LjUzMTEgMTkuMDQxOSAyNC42OTczIDE5LjEwNzdDMjQuODYzNSAxOS4xNzM1IDI1LjA0MSAxOS4yMDYgMjUuMjE5NyAxOS4yMDMyVjE5LjIwMzJaIiBmaWxsPSIjRkY1ODA0Ii8+IDxwYXRoIGQ9Ik0yMy4zNTQ0IDI1LjA2NjZMMjAuNTI3OCAyNi43OTUyQzIwLjQyNTIgMjYuODYxMyAyMC4zMDc0IDI2LjkwMDIgMjAuMTg1NiAyNi45MDc5QzIwLjA2MzggMjYuOTE1NiAxOS45NDIgMjYuODkyIDE5LjgzMTkgMjYuODM5NEMxOS43MjE4IDI2Ljc4NjcgMTkuNjI3IDI2LjcwNjcgMTkuNTU2NiAyNi42MDdDMTkuNDg2MiAyNi41MDcyIDE5LjQ0MjUgMjYuMzkxMiAxOS40Mjk3IDI2LjI2OThWMjIuODE3OUMxOS40NDI1IDIyLjY5NjUgMTkuNDg2MiAyMi41ODA0IDE5LjU1NjYgMjIuNDgwN0MxOS42MjcgMjIuMzgxIDE5LjcyMTggMjIuMzAxIDE5LjgzMTkgMjIuMjQ4M0MxOS45NDIgMjIuMTk1NiAyMC4wNjM4IDIyLjE3MiAyMC4xODU2IDIyLjE3OThDMjAuMzA3NCAyMi4xODc1IDIwLjQyNTIgMjIuMjI2MyAyMC41Mjc4IDIyLjI5MjVMMjMuMzU0NCAyMy45OTQ4QzIzLjQ0NjkgMjQuMDUwNCAyMy41MjM0IDI0LjEyODkgMjMuNTc2NSAyNC4yMjI4QzIzLjYyOTYgMjQuMzE2OCAyMy42NTc2IDI0LjQyMjggMjMuNjU3NiAyNC41MzA3QzIzLjY1NzYgMjQuNjM4NiAyMy42Mjk2IDI0Ljc0NDcgMjMuNTc2NSAyNC44Mzg2QzIzLjUyMzQgMjQuOTMyNSAyMy40NDY5IDI1LjAxMSAyMy4zNTQ0IDI1LjA2NjZaIiBmaWxsPSJ3aGl0ZSIvPjwvZz4gPGRlZnM+PGNsaXBQYXRoIGlkPSJjbGlwMF81MDMxXzIxOTE2Ij48cmVjdCB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIGZpbGw9IndoaXRlIi8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+"
+                alt=""
+                width="40px"
+              />
+              <div class="link">
+                <a href="#">Checkout Demo</a>
+                <p>Experience checkout yourself</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="commerce">
+          <h3 id="commerce">Commerce</h3>
+          <div class="commerce_linksContainer">
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGRfX25hdl9fbGlua19faWNvbiI+PHBhdGggZD0iTTI4LjM1IDBIMTMuNjVDNi4xMTEzMSAwIDAgNi4xMTEzMSAwIDEzLjY1VjI4LjM1QzAgMzUuODg4NyA2LjExMTMxIDQyIDEzLjY1IDQySDI4LjM1QzM1Ljg4ODcgNDIgNDIgMzUuODg4NyA0MiAyOC4zNVYxMy42NUM0MiA2LjExMTMxIDM1Ljg4ODcgMCAyOC4zNSAwWiIgZmlsbD0iI0Q5RjRFNCIvPiA8cGF0aCBkPSJNMjUuMzk0NSAxNS43NzFIMTYuNjA2QzEzLjcxODEgMTUuNzcxIDExLjM3NyAxOC4xMTIxIDExLjM3NyAyMVYyNy45NDU3QzExLjM3NyAzMC44MzM2IDEzLjcxODEgMzMuMTc0NyAxNi42MDYgMzMuMTc0N0gyNS4zOTQ1QzI4LjI4MjMgMzMuMTc0NyAzMC42MjM1IDMwLjgzMzYgMzAuNjIzNSAyNy45NDU3VjIxQzMwLjYyMzUgMTguMTEyMSAyOC4yODIzIDE1Ljc3MSAyNS4zOTQ1IDE1Ljc3MVoiIGZpbGw9IiMyQTM3NjEiLz4gPHBhdGggZD0iTTMxLjcwOTQgMTkuMzg4M0MyNC42ODgzIDIxLjIzMSAxNy4zMTA1IDIxLjIzMSAxMC4yODk0IDE5LjM4ODNDOC42MTQ2MSAxOC45NTc4IDguMDAwMzYgMTcuMjg4MyA5LjExMzM2IDE2LjE1OTVMMTMuMTI0NCAxMC45MDk1QzEzLjYzNjkgMTAuNDI0MSAxNC4zMTkgMTAuMTU4NCAxNS4wMjQ5IDEwLjE2OTNIMjcuMzgzNEMyOC4wODg5IDEwLjE2MDEgMjguNzcwNCAxMC40MjU2IDI5LjI4MzkgMTAuOTA5NUwzMi44ODU0IDE2LjE1OTVMMzIuOTMyNiAxNi4yMDY4TDMzLjAxNjYgMTYuMjk2QzMzLjk0NTkgMTcuNDA5IDMzLjMxNTkgMTguOTczNSAzMS43MDk0IDE5LjM4ODNaIiBmaWxsPSIjMzVBMTYyIi8+IDxwYXRoIGQ9Ik0xMS40MjM4IDE5LjY2NjVDMTcuNzIzMiAyMS4xMzY2IDI0LjI3NjUgMjEuMTM2NiAzMC41NzU4IDE5LjY2NjVDMzAuNDYxMyAxOC42MDY3IDI5Ljk2NSAxNy42MjQ4IDI5LjE3OTYgMTYuOTA0MUMyOC4zOTQyIDE2LjE4MzQgMjcuMzczMyAxNS43NzMyIDI2LjMwNzYgMTUuNzVIMTUuNjkyMUMxNC42MjY0IDE1Ljc3MzIgMTMuNjA1NSAxNi4xODM0IDEyLjgyMDEgMTYuOTA0MUMxMi4wMzQ2IDE3LjYyNDggMTEuNTM4MyAxOC42MDY3IDExLjQyMzggMTkuNjY2NVYxOS42NjY1WiIgZmlsbD0iI0ZGOUYwMCIvPiA8cGF0aCBkPSJNMjQuNjMyNSAyNC4xMzk1SDE3LjM3MTdDMTYuNTEwNiAyNC4xMzk1IDE1LjgxMjUgMjQuODM3NiAxNS44MTI1IDI1LjY5ODhDMTUuODEyNSAyNi41NTk5IDE2LjUxMDYgMjcuMjU4IDE3LjM3MTcgMjcuMjU4SDI0LjYzMjVDMjUuNDkzNiAyNy4yNTggMjYuMTkxNyAyNi41NTk5IDI2LjE5MTcgMjUuNjk4OEMyNi4xOTE3IDI0LjgzNzYgMjUuNDkzNiAyNC4xMzk1IDI0LjYzMjUgMjQuMTM5NVoiIGZpbGw9IndoaXRlIi8+PC9zdmc+"
+                alt=""
+                width="40px"
+              />
+              <div class="link">
+                <a href="#">Store</a>
+                <p>Start selling online</p>
+              </div>
+            </div>
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGRfX25hdl9fbGlua19faWNvbiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzUwMzFfMjE5NTkpIj48cGF0aCBkPSJNMjguMzU1NyAtMC4wMTU3NDcxSDEzLjY0NDZDNi4xMDAyOCAtMC4wMTU3NDcxIC0wLjAxNTYyNSA2LjEwMDE1IC0wLjAxNTYyNSAxMy42NDQ1VjI4LjM1NTVDLTAuMDE1NjI1IDM1Ljg5OTkgNi4xMDAyOCA0Mi4wMTU4IDEzLjY0NDYgNDIuMDE1OEgyOC4zNTU3QzM1LjkgNDIuMDE1OCA0Mi4wMTU5IDM1Ljg5OTkgNDIuMDE1OSAyOC4zNTU1VjEzLjY0NDVDNDIuMDE1OSA2LjEwMDE1IDM1LjkgLTAuMDE1NzQ3MSAyOC4zNTU3IC0wLjAxNTc0NzFaIiBmaWxsPSIjRjlFRUYzIi8+IDxwYXRoIGQ9Ik0yMS4yMTYyIDE5LjQwMjhDMjQuMzI2OCAxOS40MDI4IDI2Ljg0ODQgMTYuNzU0MSAyNi44NDg0IDEzLjQ4NjlDMjYuODQ4NCAxMC4yMTk2IDI0LjMyNjggNy41NzA5MiAyMS4yMTYyIDcuNTcwOTJDMTguMTA1NiA3LjU3MDkyIDE1LjU4NCAxMC4yMTk2IDE1LjU4NCAxMy40ODY5QzE1LjU4NCAxNi43NTQxIDE4LjEwNTYgMTkuNDAyOCAyMS4yMTYyIDE5LjQwMjhaIiBmaWxsPSIjRjJBRUM5Ii8+IDxwYXRoIGQ9Ik0yNi45OTU4IDE0LjE2OTlIMTUuMDAxQzEyLjQ1MDUgMTQuMTY5OSAxMC4zODI4IDE2LjIzNzYgMTAuMzgyOCAxOC43ODgxVjI1LjkzODdDMTAuMzgyOCAyOC40ODkzIDEyLjQ1MDUgMzAuNTU3IDE1LjAwMSAzMC41NTdIMjYuOTk1OEMyOS41NDYzIDMwLjU1NyAzMS42MTQgMjguNDg5MyAzMS42MTQgMjUuOTM4N1YxOC43ODgxQzMxLjYxNCAxNi4yMzc2IDI5LjU0NjMgMTQuMTY5OSAyNi45OTU4IDE0LjE2OTlaIiBmaWxsPSIjMkEzNzYxIi8+IDxwYXRoIGQ9Ik0xNS42MjUgMTQuMTg1N0MxNS43NDQgMTUuNTk3IDE2LjM4MDggMTYuOTE0NCAxNy40MTI4IDE3Ljg4NDRDMTguNDQ0OSAxOC44NTQ0IDE5Ljc5OTIgMTkuNDA4MyAyMS4yMTUyIDE5LjQzOTZDMjIuNjI5MyAxOS40MDU3IDIzLjk4MTEgMTguODUwNyAyNS4wMTEgMTcuODgwOUMyNi4wNDA4IDE2LjkxMTIgMjYuNjc2MSAxNS41OTUyIDI2Ljc5NDkgMTQuMTg1N0gxNS42MjVaIiBmaWxsPSIjRkY1ODA0Ii8+IDxwYXRoIGQ9Ik0yNy43MTM3IDIzLjczMkMyOC40MzA1IDIzLjczMiAyOS4wMTE1IDIzLjEyMDUgMjkuMDExNSAyMi4zNjZDMjkuMDExNSAyMS42MTE2IDI4LjQzMDUgMjEgMjcuNzEzNyAyMUMyNi45OTcgMjEgMjYuNDE2IDIxLjYxMTYgMjYuNDE2IDIyLjM2NkMyNi40MTYgMjMuMTIwNSAyNi45OTcgMjMuNzMyIDI3LjcxMzcgMjMuNzMyWiIgZmlsbD0id2hpdGUiLz48L2c+IDxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfNTAzMV8yMTk1OSI+PHJlY3Qgd2lkdGg9IjQyIiBoZWlnaHQ9IjQyIiBmaWxsPSJ3aGl0ZSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg=="
+                alt=""
+                width="40px"
+              />
+              <div class="link">
+                <a href="#">Payment Links</a>
+                <p>Accept payments without writing code</p>
+              </div>
+            </div>
+            <div class="pay_links">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBjbGFzcz0iaGRfX25hdl9fbGlua19faWNvbiI+PGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzUwMzFfMjE5NzQpIj48cGF0aCBkPSJNMjguMzU1NyAtMC4wMTU3NDcxSDEzLjY0NDZDNi4xMDAyOCAtMC4wMTU3NDcxIC0wLjAxNTYyNSA2LjEwMDE1IC0wLjAxNTYyNSAxMy42NDQ1VjI4LjM1NTVDLTAuMDE1NjI1IDM1Ljg5OTkgNi4xMDAyOCA0Mi4wMTU4IDEzLjY0NDYgNDIuMDE1OEgyOC4zNTU3QzM1LjkgNDIuMDE1OCA0Mi4wMTU5IDM1Ljg5OTkgNDIuMDE1OSAyOC4zNTU1VjEzLjY0NDVDNDIuMDE1OSA2LjEwMDE1IDM1LjkgLTAuMDE1NzQ3MSAyOC4zNTU3IC0wLjAxNTc0NzFaIiBmaWxsPSIjRjlFRUYzIi8+IDxwYXRoIGQ9Ik0yNi4zODAzIDExLjk2MzNIMTUuOTA5MkMxMy43MzMgMTEuOTYzMyAxMS45Njg4IDEzLjcyNzUgMTEuOTY4OCAxNS45MDM3VjI5LjU3NDVDMTEuOTY4OCAzMS43NTA3IDEzLjczMyAzMy41MTQ5IDE1LjkwOTIgMzMuNTE0OUgyNi4zODAzQzI4LjU1NjYgMzMuNTE0OSAzMC4zMjA4IDMxLjc1MDcgMzAuMzIwOCAyOS41NzQ1VjE1LjkwMzdDMzAuMzIwOCAxMy43Mjc1IDI4LjU1NjYgMTEuOTYzMyAyNi4zODAzIDExLjk2MzNaIiBmaWxsPSIjMkEzNzYxIi8+IDxwYXRoIGQ9Ik0yOC4zNDU0IDguNDc5ODZIMTMuOTQ0NEMxMi4wNTgzIDguNDc5ODYgMTAuNTI5MyAxMC4wMDc3IDEwLjUyOTMgMTEuODkyM0MxMC41MjkzIDEzLjc3NjkgMTIuMDU4MyAxNS4zMDQ3IDEzLjk0NDQgMTUuMzA0N0gyOC4zNDU0QzMwLjIzMTUgMTUuMzA0NyAzMS43NjA1IDEzLjc3NjkgMzEuNzYwNSAxMS44OTIzQzMxLjc2MDUgMTAuMDA3NyAzMC4yMzE1IDguNDc5ODYgMjguMzQ1NCA4LjQ3OTg2WiIgZmlsbD0iI0YyQUVDOSIvPiA8cGF0aCBkPSJNMTIuMDI3MyAxNC43NjM2QzEyLjU0MzcgMTUuMTEyMyAxMy4xNTM5IDE1LjI5NTYgMTMuNzc2OSAxNS4yODlIMjguNTE0MkMyOS4xMzg3IDE1LjI5NDYgMjkuNzUwNCAxNS4xMTE1IDMwLjI2OSAxNC43NjM2QzMwLjE1MjYgMTMuOTk0OSAyOS43NjgxIDEzLjI5MjIgMjkuMTgzNSAxMi43Nzk3QzI4LjU5ODkgMTIuMjY3MyAyNy44NTE5IDExLjk3ODEgMjcuMDc0NiAxMS45NjMzSDE1LjIzNzVDMTQuNDU3NSAxMS45NzQ0IDEzLjcwNjcgMTIuMjYxOSAxMy4xMTg5IDEyLjc3NDdDMTIuNTMxIDEzLjI4NzUgMTIuMTQ0MiAxMy45OTIzIDEyLjAyNzMgMTQuNzYzNlYxNC43NjM2WiIgZmlsbD0iI0ZGNTgwNCIvPiA8cGF0aCBkPSJNMjUuMTI5IDIwLjc2ODhIMTYuNjAxOEMxNi4wMDQxIDIwLjc2ODggMTUuNTE5NSAyMS4yNTM0IDE1LjUxOTUgMjEuODUxMUMxNS41MTk1IDIyLjQ0ODkgMTYuMDA0MSAyMi45MzM0IDE2LjYwMTggMjIuOTMzNEgyNS4xMjlDMjUuNzI2NyAyMi45MzM0IDI2LjIxMTMgMjIuNDQ4OSAyNi4yMTEzIDIxLjg1MTFDMjYuMjExMyAyMS4yNTM0IDI1LjcyNjcgMjAuNzY4OCAyNS4xMjkgMjAuNzY4OFoiIGZpbGw9IndoaXRlIi8+IDxwYXRoIGQ9Ik0yMC45OTk0IDI1LjMyNEgxNi42MDE4QzE2LjAwNDEgMjUuMzI0IDE1LjUxOTUgMjUuODA4NSAxNS41MTk1IDI2LjQwNjNDMTUuNTE5NSAyNy4wMDQgMTYuMDA0MSAyNy40ODg2IDE2LjYwMTggMjcuNDg4NkgyMC45OTk0QzIxLjU5NzEgMjcuNDg4NiAyMi4wODE3IDI3LjAwNCAyMi4wODE3IDI2LjQwNjNDMjIuMDgxNyAyNS44MDg1IDIxLjU5NzEgMjUuMzI0IDIwLjk5OTQgMjUuMzI0WiIgZmlsbD0id2hpdGUiLz48L2c+IDxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDBfNTAzMV8yMTk3NCI+PHJlY3Qgd2lkdGg9IjQyIiBoZWlnaHQ9IjQyIiBmaWxsPSJ3aGl0ZSIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg=="
+                alt=""
+                width="40px"
+              />
+              <div class="link">
+                <a href="#">Invoices</a>
+                <p>Create professional invoices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="direct_link">
+          <h3><a href="#">Issuing</a></h3>
+          <p>Issue physical & virtual cards</p>
+        </div>
+        <div class="direct_link">
+          <h3><a href="#">Capital</a></h3>
+          <p>Get quick access to flexible loans to grow your business.</p>
+        </div>
+        <div class="direct_link">
+          <h3><a href="#">Grow</a></h3>
+          <p>Register & incorperate your business from anywhere</p>
+        </div>
+        <div class="direct_link">
+          <h3><a href="#">Faas</a></h3>
+          <p>Embed financial services into your product</p>
+        </div>
+        <div class="sign_in">
+          <button><a href="#"></a>SIGN IN</button>
+        </div>
+      </nav>
+      <button class="nav_toggle">
+        <i class="fas fa-bars hamburger"></i>
+      </button>
+    </div>
+    <div class="heading">
+      <h1><span>Endless possibilities</span> for every business</h1>
+      <p>
+        Sell online, process payments, build financial products, or use business
+        tools designed to grow your business.
+      </p>
+      <button class="btn">Contact sales</button>
+    </div>
+    <div class="imgsection">
+      <div class="left-img img_container">
+        <div class="left_picture">
+          <img src="flutterMan.webp" alt="" width="100%" />
+          <span>Foot city</span>
+        </div>
+      </div>
+      <div class="right-img img_container">
+        <div class="right_picture">
+          <img src="flutterwoman.webp" alt="" width="100%" />
+          <span>Famasi</span>
+        </div>
+        <p>
+          It's not the size of the company, it's the size of the ambition.
+          Ambitious businesses of all sizes count on Flutterwave to grow their
+          business everywhere.
+        </p>
+      </div>
+    </div>
+    <div class="partnerslogo">
+      <p>We are trusted by <b>1 Million+</b> Businesses</p>
+      <div class="icons">
+        <div>
+          <img src="uber.svg" alt="" />
+        </div>
+        <div>
+          <img src="mtn.svg" alt="" />
+        </div>
+        <div>
+          <img src="chipper.svg" alt="" />
+        </div>
+        <div>
+          <img src="piggyvest.svg" alt="" />
+        </div>
+        <div>
+          <img src="wise.svg" alt="" />
+        </div>
+        <div>
+          <img src="microsoft.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <h1>A fully unified set of <span>Payments tools</span></h1>
+    <section class="phone_payment">
+      <div class="checkout_box checkout_card">
+        <h2>checkout</h2>
+        <p>
+          Checkout features our smart payment ordering system, incredible speed,
+          and beautiful simplicity. It's designed to grow your revenue and
+          provide the best payment experience to your customers.
+        </p>
+        <button class="btn">Get Started</button>
+      </div>
+      <div class="checkout">
+        <img src="checkout_phone.png" alt="" />
+      </div>
+      <div class="payment_box checkout_card">
+        <div>
+          <h2>Accept payments</h2>
+        </div>
+        <p>Easily receive money from anyone, anywhere in the world.</p>
+        <div>
+          <a href="#">learn more ></a>
+        </div>
+        <div class="text">
+          <div>
+            <h2>Transfers(Payout)</h2>
+          </div>
+          <p>
+            Make single or bulk transfers to bank accounts from your Flutterwave
+            dashboard.
+          </p>
+          <div>
+            <a href="#">learn more ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <h1>
+      Build a successful online business with our <span>Commerce tools.</span>
+    </h1>
+    <section>
+      <div class="section_content">
+        <div class="text-content">
+          <h2>Store</h2>
+          <p>
+            Create a free ecommerce website and start selling worldwide with
+            just a few clicks.
+          </p>
+          <button class="btn">Start selling</button>
+        </div>
+        <div class="content_img">
+          <img src="yanga-beauty.webp" width="500px" alt="" />
+        </div>
+      </div>
+      <div class="section_content overlap_content">
+        <div class="content_img overlap">
+          <img src="creator.webp" alt="" />
+          <p>
+            A platform for you, whether you’re a big business or a
+            <span>solo artist.</span>
+          </p>
+        </div>
+        <div class="text-content">
+          <div>
+            <h2>Invoices</h2>
+          </div>
+          <p>
+            Generate professional invoices for your customers and get paid from
+            anywhere.
+          </p>
+          <div>
+            <a href="#">Get started ></a>
+          </div>
+          <div>
+            <h2>Payment Links</h2>
+          </div>
+          <p>
+            Receive one-off or recurring payments from anyone, anywhere, via
+            your unique payment link.
+          </p>
+          <div>
+            <a href="#">learn more ></a>
+          </div>
+        </div>
+      </div>
+      <div class="message_txt">
+        <h4>
+          Let’s play to our strengths, shall we? You focus on bringing your
+          amazing ideas to life and we focus on providing all the
+          <span> commerce tools </span>you need.
+        </h4>
+        <div>
+          <button class="btn">Okay let's go</button>
+        </div>
+      </div>
+    </section>
+    <section class="dark_section">
+      <div class="dark_sectionHeading">
+        <h1>Create physical and virtual <span>cards</span></h1>
+        <p>
+          Issue physical and virtual cards that work globally. Create, launch,
+          and manage your cards easily from anywhere.
+        </p>
+        <button>Get started with Cards</button>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <h3>Better Business Expense Management</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p class="card__description">
+                You can issue cards for specific business purposes so you can
+                better manage your expenses. An example of a business expense
+                you’re able to better manage now is your Instagram ad. You’re
+                able to issue a specific virtual card for all your Instagram ads
+                to better manage and account for that expense within your
+                business.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <h3>New Revenue Lines</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p class="card__description">
+                You can issue a physical bank card to an employee or even a
+                trusted merchant at your local market to make the purchases for
+                you. Every time you have an order, you’re able to fund that card
+                so they can purchase it and send it to you for delivery to your
+                customer. The possibilities are endless.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="face face1">
+            <div class="content">
+              <h3>Seamless Business Organisation</h3>
+            </div>
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <p class="card__description">
+                Reduce the friction of expense management by ditching the old
+                ways of obtaining expense approvals. Use Flutterwave Issuing to
+                issue cards to the teams within your organization. A physical
+                card for your procurement team, for instance, would help to
+                speed up their execution while providing you with a birds-eye
+                view of your overall spending.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+      <div class="api_content">
+        <h1>
+          Well documented and easy-to-use <span>APIs</span> for
+          <span> developers</span>
+        </h1>
+        <p>
+          We have done the core payments integrations and abstractions, so your
+          team can easily integrate with our APIs and access multiple payment
+          functionalities.
+        </p>
+        <ul class="main_ul">
+          <li class="alternative">Quick transfers</li>
+          <li class="alternative">Initiate one-time and recurring payments</li>
+          <li class="alternative">Payment verification</li>
+          <li class="alternative">Instant virtual cards creation</li>
+          <li class="alternative">Customer verification</li>
+        </ul>
+        <button class="btn">Read the API docs</button>
+      </div>
+    </div>
+    <h1>Our global reach</h1>
+    <div class="footer_container">
+      <div class="fotter_content">
+        <div class="left_content">
+          <div class="title">
+            <h5>30+ Currencies</h5>
+          </div>
+          <div class="main_blog">
+            <div class="subtitle">
+              <p>We accept payments in more than thirty currencies</p>
+            </div>
+          </div>
+          <div class="title">
+            <h5>20M+ API calls</h5>
+          </div>
+          <div class="main_blog">
+            <div class="subtitle">
+              <p>API calls per day, peaking at 231 per second.</p>
+            </div>
+          </div>
+          <div class="title">
+            <h5>500k+ payments daily</h5>
+          </div>
+          <div class="main_blog">
+            <div class="subtitle">
+              <p>Average number of payments processed daily.</p>
+            </div>
+          </div>
+          <div class="title">
+            <h5>15+ payment options</h5>
+          </div>
+          <div class="main_blog">
+            <div class="flex">
+              <div>
+                <p>Debit & Credit cards</p>
+                <p>Mobile money</p>
+                <p>M-pesa</p>
+                <p>Bank Transfer</p>
+              </div>
+              <div>
+                <p>Bank Account</p>
+                <p>POS</p>
+                <p>VISA QR</p>
+                <p>USSD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="get_started">
+        <h6>Ready to get started?</h6>
+        <p>
+          Create an account and instantly start accepting payments, selling your
+          beautiful products online and building financial tools.
+        </p>
+        <a href="#">Contact sales ></a>
+      </div>
+    </div>
+    <footer>
+      <div class="linkscontainer">
+        <div class="link_title">
+          <h4>Products</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#"> Collect Payments</a>
+            </li>
+            <li>
+              <a href="#">Send Money</a>
+            </li>
+            <li>
+              <a href="#">Store</a>
+            </li>
+            <li>
+              <a href="#">Payment Links</a>
+            </li>
+            <li>
+              <a href="#">Invoices</a>
+            </li>
+            <li>
+              <a href="#">Capital</a>
+            </li>
+            <li>
+              <a href="#">Grow</a>
+            </li>
+            <li>
+              <a href="#">Card Issuing</a>
+            </li>
+            <li>
+              <a href="#">FaaS</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="linkscontainer">
+        <div class="link_title">
+          <h4>Resources</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Integrations</a>
+            </li>
+            <li>
+              <a href="#">Why you got charged</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="linkscontainer">
+        <div class="link_title">
+          <h4>Developers</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#"> API Documentation</a>
+            </li>
+            <li>
+              <a href="#">API Reference</a>
+            </li>
+            <li>
+              <a href="#">API Status</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="linkscontainer">
+        <div class="link_title">
+          <h4>Flutterwave</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#">Customers</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Press Kit</a>
+            </li>
+            <li>
+              <a href="#">Covid 19</a>
+            </li>
+            <li>
+              <a href="#">Barter</a>
+            </li>
+            <li>
+              <a href="#">Disha</a>
+            </li>
+            <li>
+              <a href="#">Send</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="linkscontainer">
+        <div class="link_title">
+          <h4>Contact</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#">hi@flutterwavego.com</a>
+            </li>
+            <li>
+              <a href="#">Twitter Support</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+    <div class="footer_section">
+      <div class="location_list"></div>
+      <button class="active" id="active">
+        <img
+          src="https://flutterwave.com/images/flags/us.svg"
+          width="30px"
+          id="active_flag"
+          alt=""
+        />
+        <p id="current_state">United State</p>
+      </button>
+      <div class="last_linkks">
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Youtube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="linkscontainer policy">
+      <div class="copyright">
+        <p>@EditedByCozyCode</p>
+      </div>
+      <div class="last_container">
+        <div class="link_title">
+          <h4>Legal</h4>
+        </div>
+        <section class="links_below">
+          <ul class="footerlinks">
+            <li>
+              <a href="#">Privacy policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of use</a>
+            </li>
+            <li>
+              <a href="#">Cookie policy</a>
+            </li>
+            <li>
+              <a href="#">Merchant service Agreement</a>
+            </li>
+            <li>
+              <a href="#">Payment</a>
+            </li>
+            <li>
+              <a href="#">Protection promise</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
